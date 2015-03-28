@@ -40,7 +40,7 @@ void PrintProcessNameAndID( DWORD processID )
       GetModuleBaseName( hProcess, hModule, szProcessName, sizeof(szProcessName)/sizeof(TCHAR) );
       GetModuleFileNameEx( hProcess, hModule, szFilename, sizeof(szFilename)/sizeof(TCHAR) );
     }
-    
+
     CloseHandle( hProcess );
   }
 
@@ -61,10 +61,10 @@ int main()
               sys_time.wHour,
               sys_time.wMinute,
               sys_time.wSecond);
-            
+
     DWORD aProcesses[1024];
     DWORD cbNeeded;
-  
+
     if ( !EnumProcesses( aProcesses, sizeof(aProcesses), &cbNeeded ) )
     {
       return 1;
@@ -82,7 +82,7 @@ int main()
       }
     }
     _tprintf( TEXT("\n") );
- 
+
     Sleep(60 * 1000);
   }
 
