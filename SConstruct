@@ -1,5 +1,5 @@
 env = Environment(
-    CXX        = "i686-w64-mingw32-g++", 
+    CXX        = "i686-w64-mingw32-g++",
     AR         = "i686-mingw32msvc-ar",
     RANLIB     = "i686-mingw32msvc-ranlib",
     LINKFLAGS    = ["-static-libgcc"],
